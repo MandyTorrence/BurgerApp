@@ -9,12 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clean-css": ">=4.1.11",
+    "cli": "^1.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "mysql": "^2.18.1",
+    "heroku": "^7.39.5",
     "js-yaml": ">=3.13.1",
     "lodash": ">=4.17.12",
-    "clean-css": ">=4.1.11",
+    "mysql": "^2.18.1",
     "underscore.string": ">=3.3.5"
   },
   "devDependencies": {
