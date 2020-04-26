@@ -1,19 +1,92 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+.fullwidth-header {
+  background-image: url(../images/EatTheBurger_Header.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 50px 50px 50%;
+  margin: 0px 0px 50px;
+  width: 100%;
+  color: #fff;
+}
+div#header-text{
+margin-bottom: 100px;
+text-shadow: 3px 3px 10px #000;
+}
+@media only screen and (max-width: 767px){
+  .fullwidth-header {
+  padding: 50px 50px 50px 40%;
+}
+}
+@media only screen and (max-width: 600px){
+  .fullwidth-header {
+  padding: 50px 50px 50px 30%;
+}
+}
+@media only screen and (max-width: 400px){
+  .fullwidth-header {
+  padding: 30px 30px;
+}
 }
 
-.label {
-  font-weight: bold;
+h1{
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  line-height: 36px;
+}
+div#header-text p {
+text-transform: uppercase;
+font-style: italic;
+font-family: sans-serif;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+button#addburger, button#eatbutton, button#deletebutton {
+  color: #227480;
+  border: 1px solid #227480;
+width: 40px;
+height: 40px;
+line-height: 20px;
+border-radius: 20px;
+background-image: -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+  -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+  -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+  -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),
+  -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);
+margin-left: 10px;
+
 }
 
-.form-group {
-  margin-bottom: 5px;
+div#order-form h2 {
+font-weight: bold;
+text-transform: uppercase;
+font-size: 18px;
+width: 100%;
+text-shadow: 3px 3px 10px #000;
+line-height: 18px;
+margin-bottom: 0px;
+}
+
+input#newburger {
+height: 40px;
+border: none;
+border-radius: 5px;
+width: calc(100% - 50px);
+}
+form.create-form{
+max-width: 300px;
+}
+form.create-form .form-group {
+display: flex;
+flex-wrap: wrap;
+}
+
+form.create-form .form-group label {
+width: 100%;
+font-size: 10px;
+text-transform: uppercase;
+font-style: italic;
+font-family: sans-serif;
+font-weight: 300;
+text-shadow: 3px 3px 10px #000;
 }

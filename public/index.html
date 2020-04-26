@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>Burger App</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Bootstap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Custom Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+        <!-- Javascript -->
+        <script src="/assets/js/burger.js"></script>
+    </head>
+</head>
+
+<body>
+
+
+
+    <div class="fullwidth-header">
+        <div id="header-text">
+            <h1>Eat-Da-Burger!</h1>
+            <p>What can we get you?</p>
+        </div>
+        <div id="order-form">
+            <h2>Make a Burger</h2>
+            <panel>
+                <form class="create-form">
+                    <div class="form-group">
+                        <label for="newburger">Place an Order:</label>
+                        <input type="text" id="newburger" name="burger">
+                        <button type="submit" class="btn btn-success" id="addburger"><span
+                                class="fa fa-thumbs-up"></span></button>
+                    </div>
+                </form>
+            </panel>
+        </div>
+    </div><!-- /end of header -->
+    <div class="container">
+
+        <div class="row flex">
+            <!-- Fresh Burgers -->
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="lefthead"><strong>Fresh Burgers</strong></div>
+                    <div class="panel-body">
+                        <ul>
+                            {{#each burgers}}
+                            {{#unless eaten}}
+                            <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                            <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                                data-newEaten="{{eaten}}"><span class="fa fa-cutlery"></span></button>
+                            <hr>
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Eaten Burgers -->
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="righthead"><strong>Eaten Burgers</strong></div>
+                    <div class="panel-body">
+                        <ul>
+                            {{#each burgers}}
+                            {{#if eaten}}
+                            <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                            <button type="button" class="deleteburger btn btn-danger" id="deletebutton"
+                                data-id="{{this.id}}" data-neweatened="{{eaten}}"><span
+                                    class="fa fa-trash"></span></button>
+                            <hr>
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /row -->
+
+    </div><!-- /container -->
+
+</body>
+
+</html>
