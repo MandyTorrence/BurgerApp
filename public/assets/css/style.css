@@ -73,6 +73,7 @@ border: none;
 border-radius: 5px;
 width: calc(100% - 50px);
 padding: 10px;
+color: #707070;
 }
 form.create-form{
 max-width: 300px;
