@@ -5,7 +5,7 @@ $(function () {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#burger").val().trim(),
+      name: $("#newburger").val().trim(),
       eaten: 0
     };
 
@@ -15,12 +15,12 @@ $(function () {
       data: newBurger
     }).then(
       function () {
-        console.log("created new burger");
+        console.log("Created new burger");
         location.reload();
       });
   });
 
-  $(".eat-burger").on("click", function (event) {
+  $(".eatburger").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
     var eatenState = {
@@ -37,7 +37,7 @@ $(function () {
     });
   });
 
-  $(".delete-burger").on("click", function (event) {
+  $(".deleteburger").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
 
@@ -46,7 +46,7 @@ $(function () {
       type: "DELETE"
     }).then(
       function () {
-        console.log("deleted burger", id);
+        console.log("Deleted burger", id);
         location.reload();
       }
     );
