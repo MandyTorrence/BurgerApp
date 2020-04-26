@@ -10,7 +10,7 @@
         <div class="form-group">
           <label for="newburger">Place an Order:</label>
           <input type="text" id="newburger" name="burger">
-          <button type="submit" class="btn btn-success" id="addburger"><span class="fa fa-thumbs-up"></span></button>
+          <button type="submit" class="btn" id="addburger"><span class="fa fa-thumbs-up"></span></button>
         </div>
       </form>
     </panel>
@@ -28,7 +28,7 @@
             {{#each burgers}}
             {{#unless eaten}}
             <span><strong> {{this.id}} - {{this.name}} </strong></span>
-            <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+            <button type="button" class="eatburger btn" id="eatbutton" data-id="{{this.id}}"
               data-newEaten="{{eaten}}"><span class="fa fa-cutlery"></span></button>
             <hr>
             {{/unless}}
@@ -46,7 +46,7 @@
             {{#each burgers}}
             {{#if eaten}}
             <span><strong> {{this.id}} - {{this.name}} </strong></span>
-            <button type="button" class="deleteburger btn btn-danger" id="deletebutton" data-id="{{this.id}}"
+            <button type="button" class="deleteburger btn" id="deletebutton" data-id="{{this.id}}"
               data-newEaten="{{eaten}}"><span class="fa fa-trash"></span></button>
             <hr>
             {{/if}}
